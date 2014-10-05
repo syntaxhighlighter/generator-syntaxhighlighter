@@ -10,10 +10,7 @@ Yeoman generator for [SyntaxHighlighter](https://github.com/syntaxhighlighter).
 
 ## Usage
 
-Has the following generators:
-
-* syntaxhighlighter:brush
-* syntaxhighlighter:theme
+Run `yo syntaxhighlighter:brush` to generage scaffold for a brush or `yo syntaxhighlighter:theme` to start a new theme.
 
 ## Testing
 
