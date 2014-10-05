@@ -28,6 +28,7 @@
     "brush-base": "syntaxhighlighter/brush-base"
   },
   "devDependencies": {
+    "brfs": "^1.2.0",
     "regex-lib": "syntaxhighlighter/regex-lib",
     "parser": "syntaxhighlighter/parser",
     "chai": "^1.9.1",

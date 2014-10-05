@@ -7,7 +7,7 @@ module.exports = (config) ->
       '**/*.coffee': ['browserify']
 
     browserify:
-      transform: ['coffeeify']
+      transform: ['coffeeify', 'brfs']
       extensions: ['.coffee']
       watch: true
       debug: true

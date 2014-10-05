@@ -20,9 +20,11 @@ describe 'brush', ->
 
     @target.run {}, ->
       helpers.assertFile """
+        .git
         package.json
         Gruntfile.coffee
         README.md
+        SAMPLE
         karma.conf.coffee
         .gitignore
         .travis.yml

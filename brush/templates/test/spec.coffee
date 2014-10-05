@@ -1,5 +1,6 @@
 require 'coffee-errors'
 
+fs = require 'fs'
 chai = require 'chai'
 expect = chai.expect
 parser = require 'parser'
@@ -12,18 +13,17 @@ parser = require 'parser'
 
 {Brush} = require '..'
 
-SAMPLE = """
-  /* hello */
-  function foo() {
-
-  }
-"""
+SAMPLE = fs.readFileSync "#{__dirname}/../SAMPLE", 'utf8'
+console.log SAMPLE
 
 describe 'brush-<%= slug %>', ->
   instance = null
 
   before ->
     instance = new Brush()
+
+  it 'has populated code sample', ->
+    expect(SAMPLE).to.not.match /^Populate/
 
   describe 'instance', ->
     it 'has `regexList`', ->

@@ -13,8 +13,6 @@ module.exports = class Generator extends yeoman.generators.Base
 
   askFor: ->
     done = @async()
-
-    # have Yeoman greet the user.
     console.log @yeoman
 
     prompts = [
@@ -32,6 +30,7 @@ module.exports = class Generator extends yeoman.generators.Base
   projectfiles: ->
     @template '_package.json', 'package.json'
     @template 'README.md'
+    @template 'SAMPLE'
     @template 'Gruntfile.coffee'
 
   gitfiles: ->
@@ -46,3 +45,14 @@ module.exports = class Generator extends yeoman.generators.Base
     @template 'test/spec.coffee', "test/brush-#{@slug}.spec.coffee"
     @template 'test/shcore-stub.js'
     @template 'karma.conf.coffee'
+
+  end: ->
+    done = @async()
+    opts = env: cwd: @env.cwd
+    origin = "git@github.com:syntaxhighlighter/brush-#{@slug}.git"
+
+    console.log '$ git init .'
+    @spawnCommand('git', ['init', '.'], opts).on 'exit', =>
+      console.log "$ git remote add origin #{origin}"
+      @spawnCommand('git', ['remote', 'add', 'origin', origin], opts).on 'exit', =>
+        done()
