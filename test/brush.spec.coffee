@@ -14,7 +14,7 @@ describe 'brush', ->
 
   it 'creates expected files', (done) ->
     helpers.mockPrompt @target,
-      moduleName: 'JavaScript'
+      appname: 'JavaScript'
 
     @target.options['skip-install'] = true
 

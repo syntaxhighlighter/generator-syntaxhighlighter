@@ -15,17 +15,22 @@ module.exports = class Generator extends yeoman.generators.Base
     done = @async()
     console.log @yeoman
 
-    prompts = [
-      name: 'moduleName'
-      message: 'What\'s the name of your module?'
-      default: @_.slugify(@appname)
-    ]
-
-    @prompt prompts, (props) =>
-      @moduleName = props.moduleName
-      @appname = @moduleName
+    setProps = ({@appname}) =>
       @slug = @_.slugify @appname
       done()
+
+    {appname} = @options
+
+    if appname?
+      setProps {appname}
+    else
+      prompts = [
+        name: 'appname'
+        message: 'What\'s the name of your theme (eg Monokai)?'
+        default: @_.slugify @appname
+      ]
+
+      @prompt prompts, setProps
 
   projectfiles: ->
     @template '_package.json', 'package.json'

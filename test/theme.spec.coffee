@@ -14,7 +14,7 @@ describe 'theme', ->
 
   it 'creates expected files', (done) ->
     helpers.mockPrompt @target,
-      moduleName: 'Eclipse'
+      appname: 'Eclipse'
 
     @target.options['skip-install'] = true
 
@@ -23,7 +23,6 @@ describe 'theme', ->
         package.json
         Gruntfile.coffee
         README.md
-        karma.conf.coffee
         .gitignore
         .travis.yml
         test/theme-eclipse.spec.coffee
