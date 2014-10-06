@@ -42,7 +42,6 @@ module.exports = class Generator extends yeoman.generators.Base
   tests: ->
     @template 'test/spec.coffee', "test/theme-#{@slug}.spec.coffee"
     @template 'test/mocha.opts'
-    @template 'karma.conf.coffee'
 
   end: ->
     done = @async()
