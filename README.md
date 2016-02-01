@@ -2,7 +2,7 @@
 
 Yeoman generator for [SyntaxHighlighter](https://github.com/syntaxhighlighter).
 
-[![Build Status](https://travis-ci.org/alexgorbatchev/regex-lib.svg)](https://travis-ci.org/alexgorbatchev/regex-lib)
+[![Build Status](https://travis-ci.org/syntaxhighlighter/regex-lib.svg)](https://travis-ci.org/syntaxhighlighter/regex-lib)
 
 ## Installation
 

@@ -2,11 +2,11 @@
 
 <%= appname %> brush module for [SyntaxHighlighter](https://github.com/syntaxhighlighter).
 
-[![Build Status](https://travis-ci.org/alexgorbatchev/brush-<%= slug %>.svg)](https://travis-ci.org/alexgorbatchev/brush-<%= slug %>)
+[![Build Status](https://travis-ci.org/syntaxhighlighter/brush-<%= slug %>.svg)](https://travis-ci.org/syntaxhighlighter/brush-<%= slug %>)
 
 ## Installation
 
-    npm install syntaxhighlighter/brush-<%= slug %>
+    npm install @alexgorbatchev/brush-<%= slug %>
 
 ## Testing
 
