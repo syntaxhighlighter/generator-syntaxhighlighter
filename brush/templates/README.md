@@ -6,7 +6,7 @@
 
 ## Installation
 
-    npm install @alexgorbatchev/brush-<%= slug %>
+    npm install brush-<%= slug %>
 
 ## Testing
 
