@@ -1,6 +1,6 @@
 # generator-syntaxhighlighter
 
-Yeoman generator for [SyntaxHighlighter](https://github.com/syntaxhighlighter).
+Yeoman generator for [SyntaxHighlighter](https://github.com/syntaxhighlighter/syntaxhighlighter).
 
 [![Build Status](https://travis-ci.org/syntaxhighlighter/regex-lib.svg)](https://travis-ci.org/syntaxhighlighter/regex-lib)
 
